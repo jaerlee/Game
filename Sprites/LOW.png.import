@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Walking_Devil_Animated_Draft1.png-b0fb3429d11ee1c9c170a2d6f554d15c.stex"
+path="res://.import/LOW.png-b5d9112c2d45ba4c3b9ffc68f2f5869e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Walking_Devil_Animated_Draft1.png"
-dest_files=[ "res://.import/Walking_Devil_Animated_Draft1.png-b0fb3429d11ee1c9c170a2d6f554d15c.stex" ]
+source_file="res://Sprites/LOW.png"
+dest_files=[ "res://.import/LOW.png-b5d9112c2d45ba4c3b9ffc68f2f5869e.stex" ]
 
 [params]
 

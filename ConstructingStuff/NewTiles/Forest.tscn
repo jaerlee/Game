@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ConstructingStuff/BeginnerTIleSet.tres" type="TileSet" id=2]
+[ext_resource path="res://ConstructingStuff/NewTiles/TileScripts/Fort.gd" type="Script" id=3]
+[ext_resource path="res://ConstructingStuff/ObjectSummoners/TreeSummoner.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Forest" type="TileMap" parent="."]
+position = Vector2( 0, 600 )
+scale = Vector2( 5, 5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -262131, 0, 1, -262130, 0, 0, -262129, 0, 0, -262128, 0, 0, -262127, 0, 0, -262126, 0, 0, -262125, 0, 0, -262124, 0, 0, -262123, 0, 0, -262122, 0, 0, -262121, 0, 0, -262120, 0, 0, -262119, 0, 0, -196601, 0, 1, -196600, 0, 0, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -196596, 0, 0, -131066, 0, 1, -65533, 0, 1, -65532, 0, 0, -65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0 )
+script = ExtResource( 3 )
+PositionChange = Vector2( 25, -4 )
+
+[node name="TreeSummoner" parent="Forest" instance=ExtResource( 4 )]
+position = Vector2( 81.6, -24 )
+
+[node name="TreeSummoner2" parent="Forest" instance=ExtResource( 4 )]
+position = Vector2( 132.8, -33.6 )
