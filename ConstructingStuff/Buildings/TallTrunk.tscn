@@ -9,7 +9,7 @@ extents = Vector2( 16, 64 )
 [node name="TallTrunk" type="Area2D"]
 position = Vector2( 0, -3.8147e-06 )
 script = ExtResource( 1 )
-height_change = Vector2( 0, -640 )
+height_change = Vector2( 0, -128 )
 
 [node name="TreeShape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -64 )
