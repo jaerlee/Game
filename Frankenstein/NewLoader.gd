@@ -1,10 +1,9 @@
 extends Node2D
 
-const map_length = 10
+const map_length = 20
 var land_to_instance
 var previous_end = Vector2(0,0)
 var map_numbers = []
-var tile_dimensions = [Vector2(1025,0),Vector2(1025,0),Vector2(1025,0),Vector2(1025,0),Vector2(1025,0)]
 var origin_change = Vector2(0,0)
 var previous_tree_height = 1
 
@@ -15,13 +14,14 @@ var previous_tree_height = 1
 func _ready():
 	var fort = preload("res://ConstructingStuff/NewTiles/Fort.tscn")
 	var forest = preload("res://ConstructingStuff/NewTiles/Forest.tscn")
-	var land_array = [forest,fort]
-	#preload each scene, then put them all into an array
+	var reinforest = preload("res://ConstructingStuff/NewTiles/Re-in-Forest.tscn")
+	var land_array = [forest,fort,reinforest]
+	#preload each scene, pack into an array
 	
-	randomize()
+	randomize() #why does randomize not need to be called inside the for loop?
 	for n in map_length:
-		map_numbers.append(randi()%5)
+		map_numbers.append(randi()%3)
 		land_to_instance = land_array[map_numbers[n]].instance()
 		land_to_instance.position = Vector2(previous_end)
 		add_child(land_to_instance)
-		previous_end += tile_dimensions[map_numbers[n]]
+		previous_end += 40*(land_to_instance.PositionChange + Vector2(1,0))

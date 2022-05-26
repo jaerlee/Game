@@ -13,6 +13,8 @@ func _unhandled_input(event):
 func shoot_arrow():
 	new_arrow = arrow.instance() #need to instantiate in the function, not in the variables section. Otherwise, only one instance appears
 	add_collision_exception_with(new_arrow)
-	new_arrow.position = self.position
+	new_arrow.add_collision_exception_with(new_arrow)
+	new_arrow.position = global_position
 	get_tree().get_root().add_child(new_arrow)
+
 	
