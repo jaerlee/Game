@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ConstructingStuff/BeginnerTIleSet.tres" type="TileSet" id=1]
+[ext_resource path="res://ToBeDeleted/BeginnerTIleSet.tres" type="TileSet" id=1]
 [ext_resource path="res://ConstructingStuff/NewTiles/TileScripts/Start.gd" type="Script" id=2]
 
 [node name="Start" type="TileMap"]
