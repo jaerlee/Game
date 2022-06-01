@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ConstructingStuff/Tileset_no_collisions.tres" type="TileSet" id=1]
+[ext_resource path="res://ConstructingStuff/BeginnerTIleSet.tres" type="TileSet" id=2]
+[ext_resource path="res://ConstructingStuff/NewTiles/TileScripts/Fort.gd" type="Script" id=3]
+[ext_resource path="res://ConstructingStuff/ObjectSummoners/TreeSummoner.tscn" type="PackedScene" id=4]
+
+[node name="Re-in-Forest" type="TileMap"]
+position = Vector2( 0, 600 )
+scale = Vector2( 5, 5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -458740, 1, 131072, -393204, 1, 131072, -393203, 1, 131074, -327668, 1, 131072, -327666, 1, 131074, -262133, 1, 1, -262129, 6, 0, -196598, 1, 1, -196591, 6, 0, -131064, 5, 0, -131063, 1, 65538, -131053, 4, 0, -65530, 5, 0, -65529, 1, 65538, -65515, 1, 0, -65514, 1, 0, -65513, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0 )
+script = ExtResource( 3 )
+PositionChange = Vector2( 23, -1 )
+
+[node name="TreeSummoner" parent="." instance=ExtResource( 4 )]
+position = Vector2( 36.8, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -327667, 1, 131072, -262132, 1, 131072, -262131, 1, 131072, -262130, 1, 131072, -196597, 1, 65536, -196596, 1, 131072, -196595, 1, 131072, -196594, 1, 131072, -196593, 1, 131072, -196592, 1, 131072, -131062, 1, 65536, -131061, 1, 65536, -131060, 1, 131072, -131059, 1, 131072, -131058, 1, 131072, -131057, 1, 131072, -131056, 1, 131072, -131055, 1, 131072, -131054, 1, 131072, -65528, 1, 65536, -65527, 1, 65536, -65526, 1, 65536, -65525, 1, 65536, -65524, 1, 131072, -65523, 1, 131072, -65522, 1, 131072, -65521, 1, 131072, -65520, 1, 131072, -65519, 1, 131072, -65518, 1, 131072, -65517, 1, 65536, -65516, 1, 65536, 6, 1, 65536, 7, 1, 65536, 8, 1, 65536, 9, 1, 65536, 10, 1, 65536, 11, 1, 65536, 12, 1, 131072, 13, 1, 131072, 14, 1, 131072, 15, 1, 131072, 16, 1, 131072, 17, 1, 131072, 18, 1, 131072, 19, 1, 65536, 20, 1, 65536, 21, 1, 65536, 22, 1, 65536, 23, 1, 65536 )

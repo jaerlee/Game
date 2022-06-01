@@ -9,20 +9,15 @@
 [ext_resource path="res://src/Actors/Seen.gd" type="Script" id=7]
 [ext_resource path="res://AnimatedSprite.gd" type="Script" id=8]
 
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 40 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 40 )
-
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 32, 40 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 40 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
@@ -64,16 +59,21 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 320, 0, 32, 40 )
 
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 40 )
+
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 4 ), SubResource( 2 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 3 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 33, 64.75 )
+extents = Vector2( 33, 59.375 )
 
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 103.903, 10 )
@@ -247,6 +247,7 @@ radius = 392.032
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, -1 )
+z_index = 1
 script = ExtResource( 1 )
 speed = Vector2( 800, 1600 )
 
@@ -254,10 +255,11 @@ speed = Vector2( 800, 1600 )
 position = Vector2( 8, -15 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
+frame = 10
 script = ExtResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -14.25 )
+[node name="DamageBox" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -14 )
 shape = SubResource( 1 )
 
 [node name="Attacks" type="Area2D" parent="."]
@@ -306,6 +308,7 @@ shape = SubResource( 23 )
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 2, 2 )
 
 [connection signal="body_entered" from="Attacks" to="Attacks" method="_on_Attacks_body_entered"]
 [connection signal="body_entered" from="Seen" to="Seen" method="_on_Seen_body_entered"]

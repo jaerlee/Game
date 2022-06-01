@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/ArcherPants.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/ArcherTorsoFiring.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Archer.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/ArcherTorso.png" type="Texture" id=4]
+
+[node name="ArcherNode" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Torso" type="Node2D" parent="."]
+position = Vector2( 0, -8 )
+
+[node name="Torso(steady)" type="Sprite" parent="Torso"]
+position = Vector2( -11, -15 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Torso(Firing)" type="Sprite" parent="Torso"]
+visible = false
+position = Vector2( -11, -15 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Pants" type="Sprite" parent="."]
+position = Vector2( 0, -4 )
+texture = ExtResource( 1 )
